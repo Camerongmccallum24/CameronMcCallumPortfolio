@@ -1,37 +1,39 @@
-// header scrolling effect
-$(window).on('scroll', function(){
-	if($(window).scrollTop()){
-      $('header').addClass('nav-show');
-		  
-	} 
-	else{
-		$('header').removeClass('nav-show');
-	}
-	   
-})
+$(document).ready(function(){
+    // Header scrolling effect
+    $(window).on('scroll', function(){
+        if($(window).scrollTop() > 0){
+            $('header').addClass('nav-show');
+        } else {
+            $('header').removeClass('nav-show');
+        }
+    });
 
-//hamburger
-const navSlide = () => {
-	 const hamburger = document.querySelector(".hamburger");
-	 const navbar = document.querySelector(".nav-bar");
-	 const navLinks = document.querySelectorAll(".nav-bar li");
+    // Hamburger menu functionality
+    $('.hamburger').click(function(){
+        $('.nav-bar').toggleClass('nav-active');
+        $(this).toggleClass('toggle');
 
-     hamburger.onclick = () => {
-		
-	 navbar.classList.toggle("nav-active");
-		 
-      //Animation links
-	 navLinks.forEach((link, index) => {
-		if (link.style.animation) {
-			link.style.animation = "";
-		} else {
-			link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7+1}s`;
-		   }
-		});
-	  //hamburger animation
-	 hamburger.classList.toggle("toggle");
+        // Animate links
+        $('.nav-bar li').each(function(index){
+            if ($(this).css('animation')) {
+                $(this).css('animation', '');
+            } else {
+                $(this).css('animation', `navLinkFade 0.5s ease forwards ${(index / 7) + 0.3}s`);
+            }
+        });
+    });
+});
+
+/* CSS Keyframes for navLinkFade (Include this in your CSS file) */
+/*
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
     }
-	 
-	}
-
-window.onload = () => navSlide();
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+*/
