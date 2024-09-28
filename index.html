@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cameron McCallum Portfolio</title>
+    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for social media icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
 </head>
 <body>
+    <!-- Header Section -->
     <header>
         <a href="#home" class="logo">
-            <img src="https://replit.com/@cam-g-mccallum/Cameron-McCallum-Portfolio#Images/ConnectsMyAi_Logo.png" alt="ConnectsMyAI Logo">
+            <img src="Images/ConnectsMyAi_Logo.png" alt="ConnectsMyAI Logo">
         </a>
         <nav>
             <ul class="nav-bar">
@@ -18,7 +21,7 @@
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="hamburger">
+            <div class="hamburger" onclick="toggleMenu()">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
@@ -26,7 +29,9 @@
         </nav>
     </header>
 
+    <!-- Main Content -->
     <main>
+        <!-- Home Section -->
         <section id="home">
             <div class="filter"></div>
             <div class="intro">
@@ -35,75 +40,66 @@
                 <p>AI Developer and Customer Success Specialist</p>
                 <p>Integrating machine learning solutions and automations with customer success platforms</p>
             </div>  
-            <div>   
-                <p>With an extensive background in Customer Experience, including 5+ years of experience in Customer Success</p>
-                <p>I've developed and deployed several AI-powered customer success tools that have helped companies grow their business by retaining more customers and increasing operational efficiency.</p>
-                <p>specializing in integrating machine learning solutions with customer success platforms to boost customer engagement and reduce churn.</p>
+            <div class="about">   
+                <p>With an extensive background in Customer Experience, including 5+ years of experience in Customer Success, I've developed and deployed several AI-powered customer success tools that have helped companies grow their business by retaining more customers and increasing operational efficiency.</p>
+                <p>Specializing in integrating machine learning solutions with customer success platforms to boost customer engagement and reduce churn.</p>
                 <p>My skills are focused on optimizing customer operations, using predictive analytics, automation, and intelligent communication workflows.</p>
             </div>
         </section>
 
-        <div id="projects"> 
-            <h3>My Projects.<hr></h3>
-             <p>Here are some of my projects, you may like.</p>
-             <div class="work-box">
-             <div class="work">
-           <!--───────────────card───────────────-->
-               <div class="card">
-                   <img class="work-img" src="https://images.unsplash.com/photo-1518611507436-f9221403cca2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1225&q=80">
-                   <a href="" target="_blank"> <https://github.com/Camerongmccallum24/customer-success-tools>
-                   <div class="work-content">Lorem ipsum dolor sit amet consectetur.</div></a>
-               </div>
-               <div class="card">
-                   <img class="work-img" src="https://images.unsplash.com/photo-1462642109801-4ac2971a3a51?ixlib=rb-1.2.1&auto=format&fit=crop&w=1266&q=80">
-                   <a href="" target="_blank"> <!--Link to project-->
-                   <div class="work-content">Lorem ipsum dolor sit amet consectetur.</div></a>
-               </div>
-               <div class="card">
-                   <img class="work-img" src="https://images.unsplash.com/photo-1485815457792-d1a966f9bde0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
-                   <a href="" target="_blank"> <!--Link to project-->
-                   <div class="work-content">Lorem ipsum dolor sit amet consectetur.</div></a>
-               </div>
-               <div class="card">
-                   <img class="work-img" src="https://images.unsplash.com/photo-1517842645767-c639042777db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
-                   <a href="" target="_blank"> <!--Link to project-->
-                   <div class="work-content">Lorem ipsum dolor sit amet consectetur.</div></a>
-               </div> 
-               <div class="card">
-                   <img class="work-img" src="https://images.unsplash.com/photo-1535556116002-6281ff3e9f36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=781&q=80">
-                   <a href="" target="_blank"> <!--Link to project-->
-                   <div class="work-content">Lorem ipsum dolor sit amet consectetur.</div></a>
-               </div>
-               <div class="card">
-                   <img class="work-img" src="https://images.unsplash.com/photo-1483546416237-76fd26bbcdd1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
-                   <a href="" target="_blank"> <!--Link to project-->
-                   <div class="work-content">Lorem ipsum dolor sit amet consectetur.</div></a>
-               </div> 
-                       }
-                   };
-             </div>
-             </div>
-         </div>
+        <!-- Projects Section -->
+        <section id="projects">
+            <h3>My Projects</h3>
+            <hr>
+            <p>Here are some of my projects you may like.</p>
+            <div class="work-box">
+                <div class="work">
+                    <!-- Card 1 -->
+                    <div class="card">
+                        <a href="https://github.com/Camerongmccallum24/customer-success-tools" target="_blank">
+                            <img class="work-img" src="Images/project1.jpg" alt="Customer Success Tools">
+                            <div class="work-content">
+                                <h4>Customer Success Tools</h4>
+                                <p>AI-powered tools to enhance customer success strategies.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="card">
+                        <a href="#" target="_blank">
+                            <img class="work-img" src="Images/project2.jpg" alt="Project Two">
+                            <div class="work-content">
+                                <h4>Project Two</h4>
+                                <p>Description of Project Two.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Add more cards as needed -->
+                </div>
+            </div>
         </section>
 
+        <!-- Contact Section -->
         <section id="contact">
             <h2>Contact</h2>
             <hr>
-            <p>Feel free to reach out on your preferred platform</p>
+            <p>Feel free to reach out on your preferred platform.</p>
             <div class="social-media">
                 <a href="https://www.linkedin.com/in/cameron-g-mccallum" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/Camerongmccallum24" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://g.dev/cameron-g-mccallum" target="_blank"><i class="fab fa-google"></i></a>
+                <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a>
                 <a href="https://www.connectsmyai.com" target="_blank"><i class="fas fa-globe"></i></a>
             </div>
         </section>
     </main>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 <a href="https://www.connectsmyai.com" target="_blank">ConnectsMyAI</a></p>
     </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- External JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
