@@ -1,5 +1,7 @@
+/* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+/* CSS Variables */
 :root {
     --main-background: #0b0c0f;
     --main-fonts-color: #fff;
@@ -7,6 +9,7 @@
     --main-header-background: #21252e;
 }
 
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -20,6 +23,7 @@ body {
     color: var(--main-fonts-color);
 }
 
+/* Header */
 header {
     position: fixed;
     top: 0;
@@ -30,12 +34,19 @@ header {
     align-items: center;
     padding: 10px 50px;
     z-index: 100;
+    transition: background-color 0.3s ease;
+}
+
+/* Header when scrolled */
+header.nav-show {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .logo img {
     height: 50px;
 }
 
+/* Navigation Bar */
 .nav-bar {
     display: flex;
     list-style: none;
@@ -46,12 +57,43 @@ header {
     text-decoration: none;
     padding: 10px 20px;
     font-size: 1.1rem;
+    transition: color 0.3s ease;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
     color: var(--main-decor-color);
 }
 
+/* Hamburger Menu */
+.hamburger {
+    display: none; /* Hidden on desktop */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--main-fonts-color);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger animation */
+.hamburger.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.toggle .line2 {
+    opacity: 0;
+}
+
+.hamburger.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Main Content */
 main {
     padding-top: 70px;
 }
@@ -61,7 +103,10 @@ section {
     text-align: center;
 }
 
-h1, h2 {
+h1,
+h2,
+h3,
+h4 {
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
@@ -74,12 +119,10 @@ hr {
     border: none;
 }
 
+/* Home Section */
 #home {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
+    color: #fff;
 }
 
 .filter {
@@ -88,93 +131,115 @@ hr {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('https://images.unsplash.com/photo-1544099858-75feeb57f01b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    background: url('Images/background.jpg') no-repeat center center/cover;
     opacity: 0.2;
 }
 
 .intro {
     position: relative;
     z-index: 1;
+    padding: 100px 20px 20px 20px;
 }
-/* Projects */
+
+.about {
+    position: relative;
+    z-index: 1;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Projects Section */
 #projects {
     padding: 70px 0;
-    text-align: center;
-  }
-  
-  #projects h3 {
-    font-size: 2rem;
-  }
-  
-  #projects p {
+}
+
+#projects h3 {
+    font-size: 2.5rem;
+}
+
+#projects p {
     font-size: 1.2rem;
     padding: 10px;
-  }
-  
-  .work {
-    display: flex; 
+}
+
+.work-box {
+    display: flex;
+    justify-content: center;
+}
+
+.work {
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
-  }
-  
-  .card {
-    display: flex;
-    flex-direction: column;
+}
+
+.card {
+    width: 300px;
     margin: 20px;
-    width: 200px;
-    height: 250px;
-    border-radius: 12px;
-    background: var(--main-decor-color);
-  }
-  
-  .card img {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
     width: 100%;
-    height: 70%;
-    border-radius: 10px 10px 0 0;
-  }
-  
-  .card .work-content {
-    text-align: center;
-    padding: 10px 5px;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-  
-  .card a {
+    height: auto;
+}
+
+.card .work-content {
+    padding: 15px;
+}
+
+.card h4 {
+    margin-bottom: 10px;
+    color: var(--main-decor-color);
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.card a {
     text-decoration: none;
-    color: var(--main-fonts-color);
-  }
-  
-  .card a:hover .work-content {
+    color: inherit;
+}
+
+.card a:hover .work-content {
     color: #202020;
-  }
-  
-  .card:hover {
-    box-shadow: 0 0 1.5rem gray;
-  }
-
-.work-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
 }
 
-.work-content {
-    padding: 20px;
-    color: #fff;
+/* Contact Section */
+#contact p {
+    font-size: 1.2rem;
+    padding: 10px;
 }
+
+.social-media {
+    margin-top: 20px;
+}
+
 .social-media a {
     color: var(--main-fonts-color);
     font-size: 2rem;
-    margin: 0 10px;
-    transition: color 0.3s ease;
+    margin: 0 15px;
+    transition: color 0.3s;
 }
 
 .social-media a:hover {
     color: var(--main-decor-color);
 }
 
+/* Footer */
 footer {
     background-color: var(--main-header-background);
     padding: 20px 0;
@@ -186,25 +251,40 @@ footer a {
     text-decoration: none;
 }
 
+/* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
     header {
         padding: 10px 20px;
     }
 
     .nav-bar {
-        display: none;
+        position: fixed;
+        right: 0;
+        height: 100vh;
+        top: 0;
+        background-color: #21252e;
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-bar.nav-active {
+        transform: translateX(0%);
+    }
+
+    .nav-link {
+        font-size: 1.5rem;
+        margin: 20px 0;
     }
 
     .hamburger {
-        display: block;
-        cursor: pointer;
+        display: flex;
     }
 
-    .hamburger div {
-        width: 25px;
-        height: 3px;
-        background-color: var(--main-fonts-color);
-        margin: 5px;
-        transition: all 0.3s ease;
+    .work {
+        flex-direction: column;
+        align-items: center;
     }
 }
