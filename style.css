@@ -96,7 +96,29 @@ hr {
     position: relative;
     z-index: 1;
 }
+.card {
+    background: #21252e;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px;
+    transition: all 0.3s ease;
+}
 
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,169,226,0.3);
+}
+
+.work-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.work-content {
+    padding: 20px;
+    color: #fff;
+}
 .social-media a {
     color: var(--main-fonts-color);
     font-size: 2rem;
