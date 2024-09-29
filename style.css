@@ -183,11 +183,13 @@ hr {
     background-color: #1e1e1e;
     border-radius: 8px;
     overflow: hidden;
-    transition: transform 0.3s;
+    transition: all 0.3s ease; /* Changed from just transform to all */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added initial shadow */
 }
 
 .card:hover {
-    transform: scale(1.05);
+    transform: translateY(-10px) scale(1.02); /* Combined rise and slight scale */
+    box-shadow: 0 12px 20px rgba(0, 169, 226, 0.3); /* Increased shadow with color */
 }
 
 .card img {
@@ -197,6 +199,7 @@ hr {
 
 .card .work-content {
     padding: 15px;
+    transition: color 0.3s ease; /* Smooth color transition */
 }
 
 .card h4 {
@@ -214,10 +217,9 @@ hr {
     color: inherit;
 }
 
-.card a:hover .work-content {
-    color: #202020;
+.card:hover .work-content {
+    color: var(--main-decor-color); /* Changed from #202020 to match your theme */
 }
-
 /* Contact Section */
 #contact p {
     font-size: 1.2rem;
