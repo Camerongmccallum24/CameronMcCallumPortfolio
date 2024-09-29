@@ -189,7 +189,7 @@ hr {
 
 .card:hover {
     transform: translateY(-10px) scale(1.02); /* Combined rise and slight scale */
-    box-shadow: 0 12px 20px rgba(0, 169, 226, 0.3); /* Increased shadow with color */
+    box-shadow: 0 12px 20px rgba(11, 188, 247, 0.3); /* Increased shadow with color */
 }
 
 .card img {
