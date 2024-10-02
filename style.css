@@ -1,5 +1,5 @@
 /* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 /* CSS Variables */
 :root {
@@ -37,7 +37,6 @@ header {
     transition: background-color 0.3s ease;
 }
 
-/* Header when scrolled */
 header.nav-show {
     background-color: rgba(0, 0, 0, 0.8);
 }
@@ -132,13 +131,19 @@ hr {
     right: 0;
     bottom: 0;
     background: url('Images/background.jpg') no-repeat center center/cover;
-    opacity: 0.2;
+    opacity: 0.5; /* Increased opacity for better contrast */
 }
 
 .intro {
     position: relative;
     z-index: 1;
     padding: 100px 20px 20px 20px;
+    text-align: center;
+}
+
+.tagline {
+    font-size: 1.8rem; /* Slightly increased font size */
+    margin-top: 20px;
 }
 
 .about {
@@ -218,14 +223,47 @@ hr {
 }
 
 .card:hover .work-content {
-    color: var(--main-decor-color); /* Changed from #202020 to match your theme */
+    color: var(--main-decor-color);
 }
+
 /* Contact Section */
 #contact p {
     font-size: 1.2rem;
     padding: 10px;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+input, textarea {
+    width: 80%;
+    max-width: 500px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--main-decor-color);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #008cbf;
+}
+
+/* Social Media */
 .social-media {
     margin-top: 20px;
 }
