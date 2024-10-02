@@ -23,17 +23,3 @@ $(document).ready(function(){
         });
     });
 });
-
-/* CSS Keyframes for navLinkFade (Include this in your CSS file) */
-/*
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-*/
