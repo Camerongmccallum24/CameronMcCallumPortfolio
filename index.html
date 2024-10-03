@@ -4,109 +4,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cameron McCallum Portfolio</title>
-    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome for social media icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-<!-- Header Section -->
+    <!-- Navigation Bar -->
     <header>
-        <a href="#home" class="logo">
-            <img src="https://github.com/Camerongmccallum24/CameronMcCallumPortfolio/blob/main/Images/Signature.png" alt="Cameron McCallum Portfolio">
-        </a>
         <nav>
             <ul class="nav-bar">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#blog" class="nav-link">Blog</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work-experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#blog">Blog</a></li>
             </ul>
-            <div class="hamburger" onclick="toggleMenu()">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
         </nav>
     </header>
-    <!-- Main Content -->
-    <main>
-<!-- Home Section -->
-<header class="hero-section">
-    <div class="hero-content">
-        <h4>PERSONAL WEB DEMO</h4>
-        <h1>Cameron McCallum</h1>
-        <p>I'm an AI Developer and Customer Success Specialist<br>
-           With 10 years of experience and a focus on machine learning solutions.<br>
-           I help businesses retain customers and optimize operations.</p>
-        <a href="#contact" class="cta-button">Hire me</a>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>Cameron McCallum</h1>
+            <p>AI Developer and Customer Success Specialist with over 10 years of experience.</p>
+            <p>I help businesses retain customers and optimize operations through machine learning solutions.</p>
+            <a href="#contact" class="cta-button">Hire me</a>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>I'm an AI developer and customer success specialist with over 10 years of experience. My expertise lies in deploying AI-powered customer success tools that enhance client retention, reduce churn, and drive growth for businesses. I’m passionate about the intersection of AI and customer success and have successfully integrated machine learning solutions with customer success platforms to optimize operations and improve client satisfaction.</p>
+                <div class="social-icons">
+                    <a href="https://linkedin.com/in/cameron-g-mccallum">LinkedIn</a>
+                    <a href="https://github.com/Camerongmccallum24">GitHub</a>
+                    <a href="mailto:cameron.mccallum@connectsmyai.com">Email</a>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="https://via.placeholder.com/350x350" alt="Cameron McCallum">
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="work-experience">
+        <h2>Work Experience</h2>
+        <div class="experience-container">
+            <div class="experience">
+                <h3>Enterprise Customer Success Manager</h3>
+                <p>Grantify, London, UK</p>
+                <p>2022 - Present</p>
+                <ul>
+                    <li>Developed AI-powered tools to enhance customer engagement and reduce churn.</li>
+                    <li>Successfully led a cross-functional team to increase customer satisfaction by 15%.</li>
+                    <li>Managed customer success operations and achieved a 98% retention rate.</li>
+                </ul>
+            </div>
+
+            <div class="experience">
+                <h3>Customer Success Manager</h3>
+                <p>Stepstone Group, London, UK</p>
+                <p>2019 - 2022</p>
+                <ul>
+                    <li>Implemented customer success strategies that increased customer lifetime value by 20%.</li>
+                    <li>Designed and integrated automation workflows that improved response times by 30%.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <ul>
+                <li>AI & Machine Learning</li>
+                <li>Customer Success Management</li>
+                <li>Predictive Analytics</li>
+                <li>Automation & Workflows</li>
+                <li>Cross-functional Team Leadership</li>
+                <li>Data-Driven Strategy</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects-container">
+            <div class="project">
+                <h3>Project 1: GPT Customer Success Manager</h3>
+                <p>Developed an AI-powered tool to enhance customer success strategies using GPT-powered insights.</p>
+            </div>
+
+            <div class="project">
+                <h3>Project 2: AI Automation Tool</h3>
+                <p>Created an automation tool that streamlines customer success workflows with machine learning algorithms.</p>
+            </div>
+
+            <div class="project">
+                <h3>Project 3: Customer Success Dashboard</h3>
+                <p>Designed a predictive analytics dashboard that helps teams track customer engagement metrics and churn risk.</p>
+            </div>
+        </div>
+    </section>
+    
+<!-- Blog Section -->
+<section id="blog">
+    <h2>Explore My Blog</h2>
+    <div class="blog-container">
+        <div class="blog-post">
+            <h3>Blog Post 1</h3>
+            <p>A brief description of the blog post topic and insights covered.</p>
+        </div>
+        <div class="blog-post">
+            <h3>Blog Post 2</h3>
+            <p>A brief description of the blog post topic and insights covered.</p>
+        </div>
+        <div class="blog-post">
+            <h3>Blog Post 3</h3>
+            <p>A brief description of the blog post topic and insights covered.</p>
+        </div>
     </div>
-</header>
-
-        <!-- About Section -->
-        <section id="about">
-            <h2>About Me</h2>
-            <hr>
-            <div class="about-content">
-                <p>I'm an AI developer and customer success specialist with over 10 years of experience. My expertise lies in deploying AI-powered customer success tools that enhance client retention, reduce churn, and drive growth for businesses.</p>
-                <p>I’m passionate about the intersection of AI and customer success and have successfully integrated machine learning solutions with customer success platforms to optimize operations and improve client satisfaction.</p>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects">
-            <h3>My Projects</h3>
-            <hr>
-            <p>Here are some of my projects you may like.</p>
-            <div class="work-box">
-                <div class="work">
-                    <!-- Card 1 -->
-                    <div class="card">
-                        <a href="https://github.com/Camerongmccallum24/customer-success-tools" target="_blank" rel="noopener noreferrer">
-                            <img class="work-img" src="images/GPT Customer Success Manager.png" alt="GPT Customer Success Manager">
-                            <div class="work-content">
-                                <h4>GPT Customer Success Manager</h4>
-                                <p>AI-powered tools to enhance customer success strategies.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- Card 2 -->
-                    <div class="card">
-                        <a href="#" target="_blank" rel="noopener noreferrer">
-                            <img class="work-img" src="images/AI Automation Tool.png" alt="AI Automation Tool">
-                            <div class="work-content">
-                                <h4>AI Automation Tool</h4>
-                                <p>Streamlining processes with intelligent automation.</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Blog Section -->
-        <section id="blog">
-            <h3>Blog</h3>
-            <hr>
-            <p>Read my latest thoughts on AI, customer success, and industry trends.</p>
-            <div class="blog-list">
-                <!-- Blog Post 1 -->
-                <div class="blog-post">
-                    <h4>How AI is Revolutionizing Customer Success</h4>
-                    <p>AI is becoming integral in improving customer success outcomes. Here's how...</p>
-                    <a href="#" class="read-more">Read More</a>
-                </div>
-                <!-- Blog Post 2 -->
-                <div class="blog-post">
-                    <h4>Top 5 AI Tools for Customer Success Teams</h4>
-                    <p>Explore the best AI tools that can transform how customer success teams operate...</p>
-                    <a href="#" class="read-more">Read More</a>
-                </div>
-            </div>
-        </section>
+</section>
 
         <!-- Contact Section -->
         <section id="contact">
