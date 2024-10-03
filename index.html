@@ -107,4 +107,30 @@
     <!-- External JavaScript -->
     <script src="script.js"></script>
 </body>
+<form id="chat-form">
+    <input type="text" id="message" placeholder="Type your message here" required>
+    <button type="submit">Send</button>
+</form>
+<div id="chatbox"></div>
+
+<script>
+    document.getElementById('chat-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const message = document.getElementById('message').value;
+
+        const response = await fetch('/chat', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ message }),
+        });
+
+        const { reply } = await response.json();
+        const chatbox = document.getElementById('chatbox');
+        chatbox.innerHTML += `<p><strong>You:</strong> ${message}</p>`;
+        chatbox.innerHTML += `<p><strong>Bot:</strong> ${reply}</p>`;
+        document.getElementById('message').value = '';
+    });
+</script>
 </html>
