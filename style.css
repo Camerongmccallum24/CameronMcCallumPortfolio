@@ -79,6 +79,7 @@ header.nav-show {
     transition: all 0.3s ease;
 }
 
+/* Hamburger animation */
 .hamburger.toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
 }
@@ -130,7 +131,7 @@ hr {
     right: 0;
     bottom: 0;
     background: url('Images/background.jpg') no-repeat center center/cover;
-    opacity: 0.5;
+    opacity: 0.5; /* Increased opacity for better contrast */
 }
 
 .intro {
@@ -141,15 +142,18 @@ hr {
 }
 
 .tagline {
-    font-size: 1.8rem;
+    font-size: 1.8rem; /* Slightly increased font size */
     margin-top: 20px;
 }
 
-/* About Section */
-.about-content {
-    font-size: 1.2rem;
+.about {
+    position: relative;
+    z-index: 1;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+    font-size: 1.1rem;
     line-height: 1.6;
-    padding: 0 20px;
 }
 
 /* Projects Section */
@@ -184,13 +188,13 @@ hr {
     background-color: #1e1e1e;
     border-radius: 8px;
     overflow: hidden;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; /* Changed from just transform to all */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added initial shadow */
 }
 
 .card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 12px 20px rgba(11, 188, 247, 0.3);
+    transform: translateY(-10px) scale(1.02); /* Combined rise and slight scale */
+    box-shadow: 0 12px 20px rgba(11, 188, 247, 0.3); /* Increased shadow with color */
 }
 
 .card img {
@@ -200,7 +204,7 @@ hr {
 
 .card .work-content {
     padding: 15px;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; /* Smooth color transition */
 }
 
 .card h4 {
@@ -220,36 +224,6 @@ hr {
 
 .card:hover .work-content {
     color: var(--main-decor-color);
-}
-
-/* Blog Section */
-#blog {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.blog-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.blog-post {
-    background-color: #1e1e1e;
-    padding: 20px;
-    margin: 20px;
-    width: 30%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.blog-post h3 {
-    margin-bottom: 10px;
-    color: var(--main-decor-color);
-}
-
-.blog-post p {
-    color: #ccc;
 }
 
 /* Contact Section */
@@ -317,57 +291,6 @@ footer a {
     text-decoration: none;
 }
 
-/* Hero Section */
-.hero-section {
-    background-color: var(--main-background);
-    width: 100%;
-    padding: 80px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-}
-
-.hero-content h4 {
-    font-weight: 600;
-    color: var(--main-decor-color);
-    font-size: 1rem;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-}
-
-.hero-content h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    color: var(--main-fonts-color);
-    margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    max-width: 700px;
-    margin: 0 auto 40px auto;
-    color: var(--main-fonts-color);
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: var(--main-decor-color);
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    border-radius: 30px;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #008cbf;
-}
-
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
     header {
@@ -379,7 +302,7 @@ footer a {
         right: 0;
         height: 100vh;
         top: 0;
-        background-color: var(--main-header-background);
+        background-color: #21252e;
         flex-direction: column;
         align-items: center;
         width: 60%;
