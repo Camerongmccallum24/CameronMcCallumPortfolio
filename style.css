@@ -224,47 +224,32 @@ hr {
 
 /* Blog Section */
 #blog {
-    padding: 50px 0;
+    padding: 50px 20px;
+    text-align: center;
 }
 
-#blog h3 {
-    font-size: 2.5rem;
-}
-
-.blog-list {
+.blog-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .blog-post {
-    width: 45%;
-    margin: 20px;
-    padding: 20px;
     background-color: #1e1e1e;
-    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    width: 30%;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.blog-post h4 {
+.blog-post h3 {
     margin-bottom: 10px;
     color: var(--main-decor-color);
 }
 
 .blog-post p {
-    font-size: 1rem;
     color: #ccc;
-    margin-bottom: 20px;
-}
-
-.read-more {
-    text-decoration: none;
-    color: var(--main-decor-color);
-    font-weight: bold;
-}
-
-.read-more:hover {
-    color: #008cbf;
 }
 
 /* Contact Section */
