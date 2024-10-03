@@ -334,3 +334,53 @@ footer a {
 
 /* Media Queries for Mobile Responsiveness */
 @media (max-width:
+/* Hero Section */
+.hero-section {
+    background-color: var(--main-background);
+    width: 100%;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.hero-content h4 {
+    font-weight: 600;
+    color: var(--main-decor-color);
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--main-fonts-color);
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    color: var(--main-fonts-color);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--main-decor-color);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #008cbf;
+}
