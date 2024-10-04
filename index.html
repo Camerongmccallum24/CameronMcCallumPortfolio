@@ -80,6 +80,28 @@
             </div>
         </section>
 
+        <!-- Snapshots Section -->
+        <section id="snapshots">
+            <div class="title">The Snapshots</div>
+            <div class="subtitle">Bite-sized GIFs to give you a taste 🤏🏼 of presentation design</div>
+
+            <div class="snapshots-container">
+                <div class="snapshot">
+                    <img src="gif1.gif" alt="Presentation Design GIF 1">
+                    <p>Presentation Style 1</p>
+                </div>
+                <div class="snapshot">
+                    <img src="gif2.gif" alt="Presentation Design GIF 2">
+                    <p>Presentation Style 2</p>
+                </div>
+                <div class="snapshot">
+                    <img src="gif3.gif" alt="Presentation Design GIF 3">
+                    <p>Presentation Style 3</p>
+                </div>
+                <!-- Add more GIFs as needed -->
+            </div>
+        </section>
+
         <!-- Contact Section -->
         <section id="contact">
             <h2>Contact</h2>
@@ -106,109 +128,32 @@
 
     <!-- External JavaScript -->
     <script src="script.js"></script>
-</body>
-<form id="chat-form">
-    <input type="text" id="message" placeholder="Type your message here" required>
-    <button type="submit">Send</button>
-</form>
-<div id="chatbox"></div>
 
-<script>
-    document.getElementById('chat-form').addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const message = document.getElementById('message').value;
+    <!-- Chatbox Script -->
+    <form id="chat-form">
+        <input type="text" id="message" placeholder="Type your message here" required>
+        <button type="submit">Send</button>
+    </form>
+    <div id="chatbox"></div>
 
-        const response = await fetch('/chat', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ message }),
-        });
-
-        const { reply } = await response.json();
-        const chatbox = document.getElementById('chatbox');
-        chatbox.innerHTML += `<p><strong>You:</strong> ${message}</p>`;
-        chatbox.innerHTML += `<p><strong>Bot:</strong> ${reply}</p>`;
-        document.getElementById('message').value = '';
-    });
-</script>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snapshots GIF Gallery</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
-            text-align: center;
-            padding: 20px;
-        }
-        .snapshots-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        .snapshot {
-            background-color: white;
-            padding: 10px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 300px;
-            transition: transform 0.3s;
-        }
-        .snapshot img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-        .snapshot:hover {
-            transform: scale(1.05);
-        }
-        .title {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-        .subtitle {
-            font-size: 1em;
-            color: #555;
-        }
-    </style>
-</head>
-<body>
-    <div class="title">The Snapshots</div>
-    <div class="subtitle">Bite-sized GIFs to give you a taste 🤏🏼 of presentation design</div>
-    
-    <div class="snapshots-container">
-        <div class="snapshot">
-            <img src="gif1.gif" alt="Presentation Design GIF 1">
-            <p>Presentation Style 1</p>
-        </div>
-        <div class="snapshot">
-            <img src="gif2.gif" alt="Presentation Design GIF 2">
-            <p>Presentation Style 2</p>
-        </div>
-        <div class="snapshot">
-            <img src="gif3.gif" alt="Presentation Design GIF 3">
-            <p>Presentation Style 3</p>
-        </div>
-        <!-- Add more GIFs as needed -->
-    </div>
-
-    <!-- Add this section to integrate with an existing website -->
     <script>
-        // Assuming the existing website uses a specific container to append new sections
-        document.addEventListener('DOMContentLoaded', function() {
-            const existingContainer = document.querySelector('#existing-container'); // Update selector as per the existing website structure
-            if (existingContainer) {
-                existingContainer.appendChild(document.querySelector('body'));
-            }
+        document.getElementById('chat-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const message = document.getElementById('message').value;
+
+            const response = await fetch('/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ message }),
+            });
+
+            const { reply } = await response.json();
+            const chatbox = document.getElementById('chatbox');
+            chatbox.innerHTML += `<p><strong>You:</strong> ${message}</p>`;
+            chatbox.innerHTML += `<p><strong>Bot:</strong> ${reply}</p>`;
+            document.getElementById('message').value = '';
         });
     </script>
 </body>

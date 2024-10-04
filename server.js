@@ -1,12 +1,24 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const { Configuration, OpenAIApi } = require('openai');
+const cors = require('cors');
+const rateLimit = require('express-rate-limit');
+const helmet = require('helmet');
 
 const app = express();
 app.use(bodyParser.json());
+app.use(cors());
+app.use(helmet());
+
+// Rate limiter to prevent abuse
+const limiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 100, // limit each IP to 100 requests per windowMs
+});
+app.use('/chat', limiter);
 
 const configuration = new Configuration({
-    apiKey: 'YOUR_OPENAI_API_KEY',
+    apiKey: process.env.OPENAI_API_KEY, // Use environment variable for API key
 });
 const openai = new OpenAIApi(configuration);
 
@@ -21,7 +33,8 @@ app.post('/chat', async (req, res) => {
 
         res.json({ reply: response.data.choices[0].message.content });
     } catch (error) {
-        res.status(500).send(error.toString());
+        console.error('Error communicating with OpenAI:', error); // Log error for server-side debugging
+        res.status(500).json({ error: 'Something went wrong, please try again later.' });
     }
 });
 

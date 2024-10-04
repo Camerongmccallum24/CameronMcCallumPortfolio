@@ -1,25 +1,31 @@
-$(document).ready(function(){
+document.addEventListener("DOMContentLoaded", function () {
     // Header scrolling effect
-    $(window).on('scroll', function(){
-        if($(window).scrollTop() > 0){
-            $('header').addClass('nav-show');
+    window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        if (window.scrollY > 0) {
+            header.classList.add("nav-show");
         } else {
-            $('header').removeClass('nav-show');
+            header.classList.remove("nav-show");
         }
     });
 
     // Hamburger menu functionality
-    $('.hamburger').click(function(){
-        $('.nav-bar').toggleClass('nav-active');
-        $(this).toggleClass('toggle');
+    const hamburger = document.querySelector(".hamburger");
+    const navBar = document.querySelector(".nav-bar");
 
-        // Animate links
-        $('.nav-bar li').each(function(index){
-            if ($(this).css('animation')) {
-                $(this).css('animation', '');
-            } else {
-                $(this).css('animation', `navLinkFade 0.5s ease forwards ${(index / 7) + 0.3}s`);
-            }
+    if (hamburger) {
+        hamburger.addEventListener("click", function () {
+            navBar.classList.toggle("nav-active");
+            this.classList.toggle("toggle");
+
+            // Animate links
+            document.querySelectorAll(".nav-bar li").forEach((link, index) => {
+                if (link.style.animation) {
+                    link.style.animation = "";
+                } else {
+                    link.style.animation = `navLinkFade 0.5s ease forwards ${(index / 7) + 0.3}s`;
+                }
+            });
         });
-    });
+    }
 });
