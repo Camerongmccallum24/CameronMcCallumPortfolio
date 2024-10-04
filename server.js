@@ -10,6 +10,12 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(helmet());
 
+// Set cookies with SameSite=None
+app.use((req, res, next) => {
+    res.cookie('cookieName', 'cookieValue', { sameSite: 'None', secure: true });
+    next();
+});
+
 // Rate limiter to prevent abuse
 const limiter = rateLimit({
     windowMs: 15 * 60 * 1000, // 15 minutes
