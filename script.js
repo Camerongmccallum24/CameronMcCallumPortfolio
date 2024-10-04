@@ -1,28 +1,25 @@
-// Modularized JavaScript for better structure
-function handleNavigation() {
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', (event) => {
-            event.preventDefault();
-            const targetSection = document.querySelector(link.getAttribute('href'));
-            targetSection.scrollIntoView({ behavior: 'smooth' });
+$(document).ready(function(){
+    // Header scrolling effect
+    $(window).on('scroll', function(){
+        if($(window).scrollTop() > 0){
+            $('header').addClass('nav-show');
+        } else {
+            $('header').removeClass('nav-show');
+        }
+    });
+
+    // Hamburger menu functionality
+    $('.hamburger').click(function(){
+        $('.nav-bar').toggleClass('nav-active');
+        $(this).toggleClass('toggle');
+
+        // Animate links
+        $('.nav-bar li').each(function(index){
+            if ($(this).css('animation')) {
+                $(this).css('animation', '');
+            } else {
+                $(this).css('animation', `navLinkFade 0.5s ease forwards ${(index / 7) + 0.3}s`);
+            }
         });
     });
-}
-
-function handleProjectHover() {
-    const projects = document.querySelectorAll('.project');
-    projects.forEach(project => {
-        project.addEventListener('mouseover', () => {
-            project.classList.add('hover-effect');
-        });
-        project.addEventListener('mouseout', () => {
-            project.classList.remove('hover-effect');
-        });
-    });
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    handleNavigation();
-    handleProjectHover();
 });
