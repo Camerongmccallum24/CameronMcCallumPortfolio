@@ -7,6 +7,54 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #000000;
+            color: #aaaaaa;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #000;
+            color: #007bff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        .intro h1 {
+            font-size: 3em;
+            color: #007bff;
+            text-shadow: 0 0 10px #007bff;
+        }
+        .about {
+            margin: 20px;
+            color: #aaaaaa;
+        }
+        .snapshots-container, .work-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .snapshot, .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            max-width: 300px;
+            transition: transform 0.3s;
+        }
+        .snapshot:hover, .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #007bff;
+        }
+        .work-img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
@@ -40,9 +88,63 @@
                 <p>Integrating machine learning solutions and automations with customer success platforms</p>
             </div>  
             <div class="about">   
-                <p>With 5+ years of experience in Customer Success, I've developed AI-powered customer success tools that help businesses grow by retaining customers and improving operational efficiency.</p>
-                <p>Specializing in machine learning solutions with customer success platforms to boost engagement and reduce churn.</p>
-                <p>My skills focus on optimizing customer operations, using predictive analytics, automation, and intelligent communication workflows.</p>
+                <h2>About Me</h2>
+                <p>With over 5 years of experience in Customer Success, I am passionate about leveraging AI and machine learning to create innovative solutions that drive customer retention and enhance operational efficiency. My journey has been dedicated to developing AI-powered tools that empower businesses to foster lasting relationships with their customers.</p>
+                <p>I specialize in integrating machine learning solutions with customer success platforms, enabling organizations to boost engagement and significantly reduce churn. My approach combines data-driven insights with intelligent automation, ensuring that every interaction is meaningful and effective.</p>
+            </div>
+            <div class="about">
+                <h2>Skills</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Skill/Tool</th>
+                            <th>Proficiency</th>
+                            <th>Impact/Achievement</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>AI & Machine Learning</td>
+                            <td>Advanced</td>
+                            <td>Developed ML model increasing customer retention by 25%</td>
+                        </tr>
+                        <tr>
+                            <td>Customer Success Strategy</td>
+                            <td>Expert</td>
+                            <td>Implemented strategy boosting NPS score by 30 points</td>
+                        </tr>
+                        <tr>
+                            <td>Predictive Analytics</td>
+                            <td>Advanced</td>
+                            <td>Created churn prediction model with 90% accuracy</td>
+                        </tr>
+                        <tr>
+                            <td>Python, JavaScript, SQL</td>
+                            <td>Advanced</td>
+                            <td>Built full-stack application reducing manual data entry by 70%</td>
+                        </tr>
+                        <tr>
+                            <td>Salesforce, HubSpot</td>
+                            <td>Advanced</td>
+                            <td>Integrated platforms, increasing sales team efficiency by 40%</td>
+                        </tr>
+                        <tr>
+                            <td>Docker</td>
+                            <td>Intermediate</td>
+                            <td>Containerized applications, reducing deployment time by 50%</td>
+                        </tr>
+                        <tr>
+                            <td>AWS</td>
+                            <td>Advanced</td>
+                            <td>Migrated on-premise systems to cloud, cutting costs by 35%</td>
+                        </tr>
+                        <tr>
+                            <td>Linux, Git</td>
+                            <td>Advanced</td>
+                            <td>Improved team collaboration and version control, reducing bugs by 60%</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
@@ -116,16 +218,28 @@
                 <a href="https://www.connectsmyai.com" target="_blank"><i class="fas fa-globe"></i></a>
             </div>
         </section>
-    <!-- Chatbox Script -->
-    <section>
-    <form id="chat-form">
-        <input type="text" id="message" placeholder="Type your message here" required>
-        <button type="submit">Send</button>
-    </form>
-    <div id="chatbox"></div>
+
+        <!-- Chatbox Section -->
+        <section id="chatbox-section">
+            <h2>Chat with Me</h2>
+            <form id="chat-form">
+                <input type="text" id="message" placeholder="Type your message here" required>
+                <button type="submit">Send</button>
+            </form>
+            <div id="chatbox"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 <a href="https://www.connectsmyai.com" target="_blank">ConnectsMyAI</a></p>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
 
     <script>
-                document.getElementById('chat-form').addEventListener('submit', async (e) => { 
+        document.getElementById('chat-form').addEventListener('submit', async (e) => {
             e.preventDefault();
             const message = document.getElementById('message').value;
 
@@ -144,15 +258,5 @@
             document.getElementById('message').value = '';
         });
     </script>
-</section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 <a href="https://www.connectsmyai.com" target="_blank">ConnectsMyAI</a></p>
-    </footer>
-
-    <!-- External JavaScript -->
-    <script src="script.js"></script>
-
 </body>
 </html>

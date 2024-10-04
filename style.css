@@ -182,6 +182,41 @@ button:hover {
     background-color: #0056b3;
 }
 
+/* chatbox section */
+#chatbox-section {
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+#chat-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#message {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#chatbox {
+    background: #222;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#chatbox p {
+    text-align: left;
+    padding: 5px;
+}
+
 /* Social media styling */
 .social-media {
     margin-top: 20px;

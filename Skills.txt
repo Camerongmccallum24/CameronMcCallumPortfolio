@@ -1,0 +1,11 @@
+| Skill/Tool                | Proficiency  | Impact/Achievement                                     |
+|---------------------------|--------------|-------------------------------------------------------|
+| AI & Machine Learning      | Advanced     | Developed ML model increasing customer retention by 25%|
+| Customer Success Strategy   | Expert       | Implemented strategy boosting NPS score by 30 points  |
+| Predictive Analytics       | Advanced     | Created churn prediction model with 90% accuracy      |
+| Python, JavaScript, SQL    | Advanced     | Built full-stack application reducing manual data entry by 70%|
+| Salesforce, HubSpot        | Advanced     | Integrated platforms, increasing sales team efficiency by 40%|
+| Docker                     | Intermediate  | Containerized applications, reducing deployment time by 50%|
+| AWS                        | Advanced     | Migrated on-premise systems to cloud, cutting costs by 35%|
+| Linux 
+| Git                        | Advanced     | Improved team collaboration and version control, reducing bugs by 60%|
