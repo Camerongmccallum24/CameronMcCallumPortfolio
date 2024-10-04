@@ -116,17 +116,8 @@
                 <a href="https://www.connectsmyai.com" target="_blank"><i class="fas fa-globe"></i></a>
             </div>
         </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 <a href="https://www.connectsmyai.com" target="_blank">ConnectsMyAI</a></p>
-    </footer>
-
-    <!-- External JavaScript -->
-    <script src="script.js"></script>
-
     <!-- Chatbox Script -->
+    <section>
     <form id="chat-form">
         <input type="text" id="message" placeholder="Type your message here" required>
         <button type="submit">Send</button>
@@ -134,7 +125,7 @@
     <div id="chatbox"></div>
 
     <script>
-        document.getElementById('chat-form').addEventListener('submit', async (e) => {
+                document.getElementById('chat-form').addEventListener('submit', async (e) => { 
             e.preventDefault();
             const message = document.getElementById('message').value;
 
@@ -153,5 +144,15 @@
             document.getElementById('message').value = '';
         });
     </script>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 <a href="https://www.connectsmyai.com" target="_blank">ConnectsMyAI</a></p>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+
 </body>
 </html>
