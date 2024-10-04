@@ -1,3 +1,10 @@
+function toggleMenu() {
+    const navBar = document.querySelector(".nav-bar");
+    navBar.classList.toggle("nav-active");
+    const hamburger = document.querySelector(".hamburger");
+    hamburger.classList.toggle("toggle");
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     // Header scrolling effect
     window.addEventListener("scroll", function () {
